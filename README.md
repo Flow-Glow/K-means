@@ -2,6 +2,9 @@
 
 ## What is K Means
   This algorithm is an iterative algorithm that partitions the dataset according to their features into K number of predefined non- overlapping distinct clusters or subgroups. It makes the data points of inter clusters as similar as possible and also tries to keep the clusters as far as possible. It allocates the data points to a cluster if the sum of the squared distance between the cluster’s centroid and the data points is at a minimum, where the cluster’s centroid is the arithmetic mean of the data points that are in the cluster. A less variation in the cluster results in similar or homogeneous data points within the cluster.
+### Sources :
+1. [Nvidia](https://www.nvidia.com/en-us/glossary/data-science/k-means/#:~:text=K%20Means%20is%20one%20of%20the%20simplest%20and,that%20haven%E2%80%99t%20been%20explicitly%20labeled%20within%20the%20data.)
+2. [Wikipedia](https://en.wikipedia.org/wiki/K-means_clustering)
 - - - -
 ## How K Means works
 1. Specify number of clusters K.
