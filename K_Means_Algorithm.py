@@ -7,8 +7,6 @@ rng = np.random.default_rng()
 
 
 def K_Means(data, centroids, old_centroids, k, t, D):
-    rate_L = []
-    centroid_L = []
     while Check_Static_Condition(centroids, old_centroids, t, k):
         mem = membership(data, centroids)
 
@@ -17,7 +15,7 @@ def K_Means(data, centroids, old_centroids, k, t, D):
         centroids = mean_compute(mem, centroids, k)
     inertia = CentroidRater(mem, centroids, k)
     inertia = float("{:.2f}".format(inertia))
-    # scatter_plotter(centroids, k, mem, D, inertia)
+    scatter_plotter(centroids, k, mem, D, inertia)
     return centroids, inertia
 
 
@@ -48,12 +46,15 @@ def membership(dataset, centroids):
         m[np.argmin(l)].append(i)
 
     return m
+
+
 def pixel_reader(data_p,centroids):
     l = np.empty(len(centroids))
     for lc, c in enumerate(centroids):
         old_distance = euclidean_distance_calc(data_p, c)
         l[lc] = old_distance
     return centroids[np.argmin(l)]
+
 
 def Check_Static_Condition(centroids, old_centroids, threshold, k):
     euclidean_distance = euclidean_distance_calc(centroids, old_centroids)
@@ -160,12 +161,11 @@ if __name__ == '__main__':
     print("start")
 
     kD = 2
-    DD = 2
+    DD = 3
     ND = 100
     tD = .1
     LD = 1
     Default_data, temp1, temp2 = make_blobs(n_samples=ND, centers=kD, n_features=DD, random_state=0,
                                             return_centers=True, cluster_std=1)
     kma(data=Default_data, k=kD, D=DD, N=ND, t=tD, L=LD)
-
-
+    show()
