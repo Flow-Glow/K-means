@@ -15,5 +15,4 @@ Img_list = np.array(Img_list)
 New_img = Img_list.reshape(x.shape[0], x.shape[1], x.shape[2])
 
 plt.imsave("imgs/Testw3.png",New_img/255)
-# plt.imshow(New_img/255,aspect="auto")
 plt.show()
