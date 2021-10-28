@@ -21,4 +21,3 @@
 ![picture alt](https://i.gyazo.com/d44920e3c9eb6aeb596d19adc81bbf4c.png "K Means in 2D")
 ### 3D:
 ![picture alt](https://i.gyazo.com/8b21d8e5a01cceb0f8167a5227b3dd78.png "K Means in 3D")
-
