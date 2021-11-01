@@ -2,7 +2,7 @@ import numpy as np, matplotlib.pyplot as plt
 from sklearn.datasets import make_blobs
 from datetime import datetime
 
-# 10/13/21 K Means Algorithm By: Ziv Landau
+# 10/13/21 K Means Algorithm By: Wolf
 rng = np.random.default_rng()
 
 
